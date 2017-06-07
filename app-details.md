@@ -1,5 +1,7 @@
 # Grading Rubric 
 
+Please write your app [here](./src/App.js).
+
 * Commit includes static page (10 pts)
 * Components receiving `props` should use `prop-types` (5 pts)
 * Components should only be as smart as they need to be (5 pts)
