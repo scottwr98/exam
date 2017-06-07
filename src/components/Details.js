@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import {array} from 'prop-types'
 
-class Details extends Component {
-  render() {
+
+//dumb component
+const Details=(props)=> {
+    //filter the data down to just the item requested based on the route
+    const selectedRepo = props.data[(props.match.params.id)-1] 
     return (
       <div className="List"
            style={{
@@ -11,11 +16,20 @@ class Details extends Component {
              textAlign: 'center'
            }}
       >
-        <h2>Crazy_Counter details</h2>
+        <h2>{selectedRepo.name} details</h2>
         <div className="row"
              style={{
                textAlign: 'left'  
              }}>
+            <Link to="/"
+                  style={{
+                        position:'absolute',
+                        top:'0',
+                        right:'0'
+                  }}
+            >
+                <button>Home</button>
+            </Link>
             <table className="table" >
                 <thead> 
                     <tr>
@@ -26,9 +40,9 @@ class Details extends Component {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>32</td>
-                        <td>6</td>
-                        <td>JavaScript</td>
+                        <td>{selectedRepo.stargazers_count}</td>
+                        <td>{selectedRepo.forks_count}</td>
+                        <td>{selectedRepo.language}</td>
                     </tr>
                 </tbody>
             </table>
@@ -36,7 +50,10 @@ class Details extends Component {
       </div>
 
     );
-  }
+}
+
+Details.propTypes = {
+    data : array.isRequired
 }
 
 export default Details;
