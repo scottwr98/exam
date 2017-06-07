@@ -10,6 +10,6 @@ This exam is to be completed in two parts:
 
 Please remember to commit your code (don't push it until you're completely done) at the following milestones:
 
-1. completes written portion
-2. completes static version
-3. completes app
+1. `completes written portion`
+2. `completes static version`
+3. `completes app`
