@@ -56,10 +56,11 @@ Please write your answer [here](./reverseArr.js)
 > Your answer here...
 ---
 
-7. What is the answer to this question?
-* A) Callback
-* B) Object
-* C) Push to Github
+7. What is the best thing?
+* A) Callbacks
+* B) Objects
+* C) Promises
+* D) Pushing to Github
 
 ---
 > Your answer here...
